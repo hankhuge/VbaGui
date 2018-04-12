@@ -2,8 +2,10 @@
 import HomeAutomation.HomeAutomation;
 import Youtube.Search;
 import com.darkprograms.speech.synthesiser.Synthesiser;
+import java.awt.Desktop;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.net.URI;
 import net.hank.googlesearch.GoogleSearch;
 import net.hank.infoextract.Extractor;
 import net.hank.player.Player;
@@ -29,6 +31,18 @@ public class Decide {
         term=term.trim();
         if(term.equals("hello") || term.equalsIgnoreCase("hello jarvis"))
             Synthesizer.saytext("Hello" + username + "How may I help you?");
+        
+        else if(term.contains("search") && term.contains("google"))
+            GoogleSearch.search(term.split("for")[1].trim());
+        
+        else if(term.equalsIgnoreCase("open facebook"))
+            Desktop.getDesktop().browse(new URI("https://www.facebook.com"));
+        
+        else if(term.equalsIgnoreCase("open linkedin"))
+            Desktop.getDesktop().browse(new URI("https://www.linkedin.com"));
+        
+        else if(term.equalsIgnoreCase("open gmail"))
+            Desktop.getDesktop().browse(new URI("https://www.gmail.com"));
         
         else if(term.contains("about"))
         {

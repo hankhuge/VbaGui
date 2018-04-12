@@ -39,7 +39,7 @@ public class Recognizer {
           System.out.println("This is the string:"+search);
           try
           {               
-              decide.decide(search);
+              decide.decide(search.toLowerCase());
           } 
           catch (Exception ex) {}
           //System.out.println("Paragraph Line Added");

@@ -1,8 +1,11 @@
 package net.hank.googlesearch;
 
 
+import java.awt.Desktop;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URLDecoder;
 import java.net.URLEncoder;
 import org.jsoup.Jsoup;
@@ -22,6 +25,13 @@ import org.jsoup.select.Elements;
  */
 public class GoogleSearch {
  
+   public static void search(String term) throws URISyntaxException, IOException
+   {
+       String s = "https://www.google.co.in/search?q="+term;
+       URI uri= new URI(s);
+       Desktop.getDesktop().browse(uri);
+   
+   }
    public static String getSearchTerm(String term) throws UnsupportedEncodingException, IOException 
    {
         
