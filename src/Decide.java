@@ -24,7 +24,7 @@ public class Decide {
     String username = System.getProperty("user.name");
     WindowActivity wa = new WindowActivity();
     HomeAutomation homeAuto = new HomeAutomation();
-    
+    Player p = new Player();
     
     public void decide(String term) throws Exception
     {
@@ -60,12 +60,11 @@ public class Decide {
             System.err.println(info);
             Synthesiser syn = new Synthesiser("en");
             InputStream data = syn.getMP3Data(info);
-            Player p = new Player();
             p.play(data);
+            
         }
         else if(term.contains("open") || term.contains("Open"))
         {
-            System.err.println("Inside open");
            String s = term.split("open")[1];
            s = s.toLowerCase();
            s = s.trim();

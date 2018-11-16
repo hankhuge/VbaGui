@@ -19,10 +19,12 @@ public class WindowActivity {
     LogoForm frame ;
     MainFrame mainFrame;
    
-    public void showWindow()
+    public void showWindow() throws MalformedURLException
     {
-       frame = new LogoForm(new JFrame(), true);
-       frame.setVisible(true);
+        frame= new LogoForm(new JFrame(), true);
+        frame.setVisible(true);
+       //mainFrame = new MainFrame();
+       //mainFrame.setVisible(true);
     }
     
      public void expand() throws MalformedURLException, IOException, LineUnavailableException

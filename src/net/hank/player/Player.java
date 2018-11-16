@@ -18,7 +18,15 @@ import javazoom.jl.decoder.JavaLayerException;
 public class Player {
     
     javazoom.jl.player.Player p;
+    public boolean isPlaying()
+    {
+       return p.isComplete();
+    }
     
+    public void stop()
+    {
+      p.close();
+    }
     public void play(InputStream is) throws JavaLayerException
     {
         BufferedInputStream bis = new BufferedInputStream(is);
@@ -30,6 +38,7 @@ public class Player {
             @Override 
             public void run() 
             {
+                
                 try {
                     p.play();
                 } catch (JavaLayerException ex) {

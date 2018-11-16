@@ -40,7 +40,7 @@ public class GoogleSearch {
         String search = term;
         String charset = "UTF-8";
         String userAgent = "ExampleBot 1.0 (+http://example.com/bot)"; // Change this to your company's name and bot homepage!
-        System.out.println(Jsoup.connect(google + URLEncoder.encode(search, charset)).userAgent(userAgent).get());
+        //System.out.println(Jsoup.connect(google + URLEncoder.encode(search, charset)).userAgent(userAgent).get());
         Elements links = Jsoup.connect(google + URLEncoder.encode(search, charset)).userAgent(userAgent).get().select(".g>.r>a");
 
         for (Element link : links) {

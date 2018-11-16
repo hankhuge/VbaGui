@@ -36,7 +36,7 @@ public class Extractor {
             }
         }
      
-        System.out.println("text = " + text);
+        
         JSONObject json = new JSONObject(text);
         JSONObject query = json.getJSONObject("query");
         JSONObject pages = query.getJSONObject("pages");
