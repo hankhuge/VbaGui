@@ -1,5 +1,5 @@
 
-import HomeAutomation.HomeAutomation;
+//import HomeAutomation.HomeAutomation;
 import Youtube.Search;
 import com.darkprograms.speech.synthesiser.Synthesiser;
 import java.awt.Desktop;
@@ -23,7 +23,7 @@ public class Decide {
        
     String username = System.getProperty("user.name");
     WindowActivity wa = new WindowActivity();
-    HomeAutomation homeAuto = new HomeAutomation();
+    //HomeAutomation homeAuto = new HomeAutomation();
     Player p = new Player();
     
     public void decide(String term) throws Exception
@@ -200,14 +200,14 @@ public class Decide {
                 
             }
         }
-        else if(term.equalsIgnoreCase("expand"))
-            ;     
-        else if(term.equalsIgnoreCase("shrink"))
-            ;
-        else if(term.contains("turn on") || term.contains("Turn On"))
-             homeAuto.decideTurnON(term.toLowerCase()); 
-        else if(term.contains("turn off") || term.contains("Turn Off"))
-             homeAuto.decideTurnOFF(term.toLowerCase()); 
+        //else if(term.equalsIgnoreCase("expand"))
+          //  ;     
+      //  else if(term.equalsIgnoreCase("shrink"))
+       //     ;
+       // else if(term.contains("turn on") || term.contains("Turn On"))
+       //      homeAuto.decideTurnON(term.toLowerCase()); 
+      //  else if(term.contains("turn off") || term.contains("Turn Off"))
+       //      homeAuto.decideTurnOFF(term.toLowerCase()); 
         else if(term.contains("play") && term.endsWith("video"))
         {
            String ID =  Search.GetID(term.replace("play", ""));
